@@ -3,7 +3,7 @@
 # Read `man 5 sway` for a complete reference.
 
 xwayland disable
-set $background /home/user/Pictures/black.png
+set $background ~/.config/sway/bg.png
 
 # Colors                border   bg       text     indi     childborder
 set $cl_high #009ddc

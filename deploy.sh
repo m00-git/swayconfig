@@ -6,4 +6,4 @@ mv waybarconfig ~/.config/waybar/config
 mv waybarstyle.css ~/.config/waybar/style.css
 mv bg.png ~/.config/sway/bg.png
 mv .vimrc ~/.vimrc
-#eventually add .bashrc
+cat .bashrc >> ~/.bashrc

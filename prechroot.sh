@@ -26,5 +26,6 @@ mount -o compress=lzo,subvol=@snapshots,$o_btrfs /dev/mapper/artix /mnt/.snapsho
 basestrap /mnt base base-devel runit elogind-runit linux linux-headers linux-firmware wget vim amd-ucode btrfs-progs grub snapper mlocate networkmanager networkmanager-runit network-manager-applet dosfstools cryptsetup doas
 # Generate fstab
 fstabgen -U /mnt >> /mnt/etc/fstab
-
-echo "now run \"artix-chroot /mnt\" then ./chrooted.sh"
+cd /mnt
+wget https://raw.githubusercontent.com/m00-git/install-artix/main/chrooted.sh
+echo "now run \"artix-chroot /mnt\" then bash chrooted.sh"

@@ -19,6 +19,7 @@ wget https://raw.githubusercontent.com/m00-git/swayconfig/main/mkinitcpio.conf
 cd
 mkinitcpio -p linux
 
+fdisk -l
 echo "Input again the drive you have chosen to install Artix on. Ex: sda"
 read DRIVE
 wget https://raw.githubusercontent.com/m00-git/install-artix/main/grub-top

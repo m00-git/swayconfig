@@ -1,3 +1,4 @@
+fdisk -l | grep /dev
 echo "Input again the drive you are installing artix to:"
 read DRIVE
 echo "Input again the name of the user you made earlier:"

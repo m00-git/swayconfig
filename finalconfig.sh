@@ -12,4 +12,8 @@ wget https://raw.githubusercontent.com/m00-git/swayconfig/main/.bashrc
 wget https://raw.githubusercontent.com/m00-git/swayconfig/main/waybarconfig
 wget https://raw.githubusercontent.com/m00-git/swayconfig/main/swayconfig
 wget https://raw.githubusercontent.com/m00-git/swayconfig/main/waybarstyle.css
+
+# my needed packages
+pacman -S pulseaudio pavucontrol fv vlc
 trizen -S fedora-firefox-wayland-bin
+

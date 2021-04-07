@@ -20,3 +20,4 @@ trizen -S fedora-firefox-wayland-bin
 doas ln -s /etc/runit/sv/libvirtd /run/runit/service
 cd /etc/openvpn
 wget https://raw.githubusercontent.com/m00-git/install-artix/main/update-resolv-conf
+doas chmod +x update-resolv-conf

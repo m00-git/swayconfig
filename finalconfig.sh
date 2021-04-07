@@ -14,7 +14,9 @@ wget https://raw.githubusercontent.com/m00-git/swayconfig/main/swayconfig
 wget https://raw.githubusercontent.com/m00-git/swayconfig/main/waybarstyle.css
 
 # my needed packages
-pacman -S pulseaudio pavucontrol fv vlc virt-manager libvirt-runit qemu nftables nftables-runit
+pacman -S pulseaudio pavucontrol fv vlc virt-manager libvirt-runit qemu nftables nftables-runit openvpn
 trizen -S fedora-firefox-wayland-bin
 
 doas ln -s /etc/runit/sv/libvirtd /run/runit/service
+cd /etc/openvpn
+wget https://raw.githubusercontent.com/m00-git/install-artix/main/update-resolv-conf

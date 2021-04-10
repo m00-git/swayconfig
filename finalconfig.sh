@@ -19,11 +19,18 @@ wget https://raw.githubusercontent.com/m00-git/swayconfig/main/waybarstyle.css
 pacman -S pulseaudio pavucontrol fv vlc virt-manager libvirt-runit qemu bridge-utils qemu-guest-agent-runit nftables nftables-runit openvpn otf-font-awesome transmission-gtk openntpd openntpd-runit
 trizen -S fedora-firefox-wayland-bin
 
+# link and enable services
 doas ln -s /etc/runit/sv/libvirtd /run/runit/service
-doas ln -s /etc/runit/sv/qemu-guest-agent /run/runit/service
-doas ln -s /etc/runit/sv/openntpd
 doas sv up libvrtd
+doas ln -s /etc/runit/sv/qemu-guest-agent /run/runit/service
 doas sv up qemu-guest-agent
+doas ln -s /etc/runit/sv/openntpd /run/runit/service
+doas sv up openntpd
+doas ln -s /etc/runit/sv/virtlockd /run/runit/service
+doas sv up virtlockd
+doas ln -s /etc/runit/virtlogd /run/runit/service
+doas sv up virtlogd
+
 doas usermod --append --groups $USER
 cd /etc/openvpn
 wget https://raw.githubusercontent.com/m00-git/install-artix/main/update-resolv-conf

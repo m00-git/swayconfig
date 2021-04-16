@@ -4,7 +4,7 @@ set expandtab
 set tabstop=4
 set softtabstop=4
 set autoindent
-set colorcolumn=80
+set colorcolumn=100
 highlight LineNr term=bold cterm=NONE ctermfg=LightBlue ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
 set cursorline
 set cursorlineopt=number

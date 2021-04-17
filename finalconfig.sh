@@ -5,6 +5,10 @@ rm .vimrc
 wget https://raw.githubusercontent.com/m00-git/swayconfig/main/.vimrc
 rm .bashrc
 wget https://raw.githubusercontent.com/m00-git/swayconfig/main/.bashrc
+wget https://github.com/m00-git/install-artix/raw/main/BlockZone.ttf
+mkdir -p ~/.local/share/fonts 
+mv BlockZone.ttf ~/.local/share/fonts
+fc-cache -f -v 
 mkdir ~/.config/
 cd ~/.config
 mkdir sway

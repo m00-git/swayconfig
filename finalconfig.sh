@@ -12,14 +12,21 @@ wget https://raw.githubusercontent.com/m00-git/swayconfig/main/.vimrc
 rm .bashrc
 wget https://raw.githubusercontent.com/m00-git/swayconfig/main/.bashrc
 
-mkdir -p ~/.config/sway
 mkdir -p ~/.config/termite
 cd sway
 wget https://github.com/m00-git/swayconfig/raw/main/bg.png
 wget https://raw.githubusercontent.com/m00-git/swayconfig/main/.bashrc
+
+mkdir -p ~/.config/waybar
 wget https://raw.githubusercontent.com/m00-git/swayconfig/main/waybarconfig
-wget https://raw.githubusercontent.com/m00-git/swayconfig/main/swayconfig
+mv waybarconfig ~/.config/waybar/config
 wget https://raw.githubusercontent.com/m00-git/swayconfig/main/waybarstyle.css
+mv waybarstyle.css ~/.config/waybar/style.css
+
+mkdir -p ~/.config/sway
+wget https://raw.githubusercontent.com/m00-git/swayconfig/main/swayconfig
+mv swayconfig ~/.config/sway/config
+
 cd ~/termite
 wget https://raw.githubusercontent.com/m00-git/install-artix/main/termite-config
 mv termite-config config

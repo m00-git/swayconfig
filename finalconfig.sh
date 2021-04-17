@@ -1,23 +1,29 @@
 echo "Whos your home user again lol"
 read USER
 cd
-rm .vimrc
-wget https://raw.githubusercontent.com/m00-git/swayconfig/main/.vimrc
-rm .bashrc
-wget https://raw.githubusercontent.com/m00-git/swayconfig/main/.bashrc
+# Get and install preferred font
 wget https://github.com/m00-git/install-artix/raw/main/BlockZone.ttf
 mkdir -p ~/.local/share/fonts 
 mv BlockZone.ttf ~/.local/share/fonts
 fc-cache -f -v 
-mkdir ~/.config/
-cd ~/.config
-mkdir sway
+# Rest of configs
+rm .vimrc
+wget https://raw.githubusercontent.com/m00-git/swayconfig/main/.vimrc
+rm .bashrc
+wget https://raw.githubusercontent.com/m00-git/swayconfig/main/.bashrc
+
+mkdir -p ~/.config/sway
+mkdir -p ~/.config/termite
 cd sway
 wget https://github.com/m00-git/swayconfig/raw/main/bg.png
 wget https://raw.githubusercontent.com/m00-git/swayconfig/main/.bashrc
 wget https://raw.githubusercontent.com/m00-git/swayconfig/main/waybarconfig
 wget https://raw.githubusercontent.com/m00-git/swayconfig/main/swayconfig
 wget https://raw.githubusercontent.com/m00-git/swayconfig/main/waybarstyle.css
+cd ~/termite
+wget https://raw.githubusercontent.com/m00-git/install-artix/main/termite-config
+mv termite-config config
+cd
 
 # my needed packages
 pacman -S pulseaudio pavucontrol fv vlc virt-manager libvirt-runit qemu bridge-utils qemu-guest-agent-runit nftables nftables-runit openvpn otf-font-awesome transmission-gtk openntpd openntpd-runit

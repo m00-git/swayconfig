@@ -33,7 +33,6 @@ rm grub-*
 grub-install --target=i386-pc /dev/$DRIVE
 grub-mkconfig -o /boot/grub/grub.cfg
 
-cd /home/$USER
 wget https://raw.githubusercontent.com/m00-git/install-artix/main/install-scripts/3postchroot.sh
 chmod +x 3postchroot.sh
 

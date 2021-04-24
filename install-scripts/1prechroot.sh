@@ -27,5 +27,5 @@ basestrap /mnt base base-devel runit elogind-runit linux linux-headers linux-fir
 # Generate fstab
 fstabgen -U /mnt >> /mnt/etc/fstab
 cd /mnt
-wget https://raw.githubusercontent.com/m00-git/install-artix/main/chrooted.sh
+wget https://raw.githubusercontent.com/m00-git/install-artix/main/install-scripts/2chrooted.sh
 echo "now run \"artix-chroot /mnt\" then bash chrooted.sh"

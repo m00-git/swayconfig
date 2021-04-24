@@ -33,7 +33,9 @@ rm grub-*
 grub-install --target=i386-pc /dev/$DRIVE
 grub-mkconfig -o /boot/grub/grub.cfg
 
+cd /home/$USER
 wget https://raw.githubusercontent.com/m00-git/install-artix/main/install-scripts/3config.sh
+chmod +x 3config.sh
 
 echo "You must now manually enter the following commands: after reboot run bash config.sh"
 echo "exit"

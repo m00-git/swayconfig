@@ -12,7 +12,7 @@ echo "Name of your user?"
 read USER
 useradd -m -G wheel $USER
 echo "Set your user password"
-passwd me # set user password
+passwd $USER # set user password
 
 rm /etc/mkinitcpio.conf; cd /etc
 wget https://raw.githubusercontent.com/m00-git/install-artix/main/sysfiles/mkinitcpio.conf

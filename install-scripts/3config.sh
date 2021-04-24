@@ -31,8 +31,9 @@ echo "permit $USER" > /etc/doas.conf
 pacman -Rns sudo
 usermod --append --groups $USER
 
+mkdir /etc/openvpn
 cd /etc/openvpn
-wget https://raw.githubusercontent.com/m00-git/install-artix/main/update-resolv-conf
+wget https://raw.githubusercontent.com/m00-git/install-artix/main/sysfiles/update-resolv-conf
 chmod +x update-resolv-conf
 
 ### Rice me out ###

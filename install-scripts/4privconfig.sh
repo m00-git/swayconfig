@@ -13,15 +13,15 @@ sudo sv up virtlockd
 sudo ln -s /etc/runit/virtlogd /run/runit/service
 sudo sv up virtlogd
 
-sudo echo "permit $USER" > /etc/doas.conf
-sudo pacman -Rns sudo
-
 sudo usermod --append --groups $USER
 
 sudo mkdir /etc/openvpn
 cd /etc/openvpn
 sudo wget https://raw.githubusercontent.com/m00-git/install-artix/main/sysfiles/update-resolv-conf
 sudo chmod +x update-resolv-conf
+
+sudo echo "permit $USER" > /etc/doas.conf
+sudo pacman -Rns sudo
 
 cd /home/$USER
 wget https://raw.githubusercontent.com/m00-git/install-artix/main/install-scripts/5finalconfig.sh

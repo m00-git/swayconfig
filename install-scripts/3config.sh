@@ -37,6 +37,6 @@ wget https://raw.githubusercontent.com/m00-git/install-artix/main/sysfiles/updat
 chmod +x update-resolv-conf
 
 ### Rice me out ###
-wget -o /home/$USER/finalconfig.sh https://raw.githubusercontent.com/m00-git/install-artix/main/install-scripts/4finalconfig.sh
-echo "You will now be entering your user, run bash 4finalconfig.sh"
+wget -o /home/$USER/4finalconfig.sh https://raw.githubusercontent.com/m00-git/install-artix/main/install-scripts/4finalconfig.sh
+echo "You will now be entering your user, run bash 4finalconfig.sh from your home dir"
 su $USER 

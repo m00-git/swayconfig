@@ -37,7 +37,7 @@ cd /home/$USER
 wget https://raw.githubusercontent.com/m00-git/install-artix/main/install-scripts/3config.sh
 chmod +x 3config.sh
 
-echo "You must now manually enter the following commands: after reboot run bash 3config.sh"
+echo "You must now manually enter the following commands: after reboot, as root run bash 3config.sh"
 echo "exit"
 echo "umount -R /mnt"
 echo "reboot"

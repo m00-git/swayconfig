@@ -14,6 +14,7 @@ chmod -R g-rwx,o-rwx /boot
 ### Base System Setup ###
 ln -s /etc/runit/sv/NetworkManager /run/runit/service
 sv up NetworkManager
+echo "$USER ALL=(ALL) ALL" >> /etc/sudoers
 
 ### Rice me out ###
 cd /home/$USER

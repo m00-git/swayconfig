@@ -1,6 +1,6 @@
 echo "Whos your home user again lol"
 read USER
-cd
+cd /home/$USER
 # Get and install preferred font
 wget https://github.com/m00-git/install-artix/raw/main/BlockZone.ttf
 mkdir -p ~/.local/share/fonts 

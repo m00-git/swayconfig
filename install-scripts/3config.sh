@@ -20,5 +20,5 @@ pacman -Rns sudo
 
 ### Rice me out ###
 echo "You will now be entering your user, run bash finalconfig.sh"
-wget -o /home/$USER/finalconfig.sh https://raw.githubusercontent.com/m00-git/install-artix/main/finalconfig.sh
+wget -o /home/$USER/finalconfig.sh https://raw.githubusercontent.com/m00-git/install-artix/main/install-scripts/4finalconfig.sh
 su $USER 

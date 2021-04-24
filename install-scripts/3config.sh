@@ -14,7 +14,7 @@ chmod -R g-rwx,o-rwx /boot
 ### Base System Setup ###
 ln -s /etc/runit/sv/NetworkManager /run/runit/service
 sv up NetworkManager
-pacman -S neofetch doas trizen tmux termite wget sway waybar
+pacman -S neofetch doas trizen tmux termite wget sway waybar pulseaudio pavucontrol fv vlc virt-manager libvirt-runit qemu bridge-utils qemu-guest-agent-runit nftables nftables-runit openvpn otf-font-awesome transmission-gtk openntpd openntpd-runit
 echo "permit $USER" > /etc/doas.conf
 pacman -Rns sudo
 

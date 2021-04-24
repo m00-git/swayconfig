@@ -1,6 +1,6 @@
 echo "whos your user"
 read USER
-sudo pacman -S neofetch doas trizen tmux termite wget sway waybar pulseaudio pavucontrol fv vlc virt-manager libvirt-runit qemu bridge-utils qemu-guest-agent-runit nftables nftables-runit openvpn otf-font-awesome transmission-gtk openntpd openntpd-runit
+sudo pacman -S neofetch doas trizen tmux termite wget bemenu-wlroots sway waybar pulseaudio pavucontrol vlc virt-manager libvirt-runit qemu bridge-utils qemu-guest-agent-runit nftables nftables-runit openvpn otf-font-awesome transmission-gtk openntpd openntpd-runit
 
 sudo ln -s /etc/runit/sv/libvirtd /run/runit/service
 sudo sv up libvrtd
@@ -20,7 +20,8 @@ cd /etc/openvpn
 sudo wget https://raw.githubusercontent.com/m00-git/install-artix/main/sysfiles/update-resolv-conf
 sudo chmod +x update-resolv-conf
 
-sudo echo "permit $USER" > /etc/doas.conf
+cd /etc
+sudo echo "permit $USER" > doas.conf
 sudo pacman -Rns sudo
 
 cd /home/$USER

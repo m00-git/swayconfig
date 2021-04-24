@@ -15,8 +15,25 @@ chmod -R g-rwx,o-rwx /boot
 ln -s /etc/runit/sv/NetworkManager /run/runit/service
 sv up NetworkManager
 pacman -S neofetch doas trizen tmux termite wget sway waybar pulseaudio pavucontrol fv vlc virt-manager libvirt-runit qemu bridge-utils qemu-guest-agent-runit nftables nftables-runit openvpn otf-font-awesome transmission-gtk openntpd openntpd-runit
+
+ln -s /etc/runit/sv/libvirtd /run/runit/service
+sv up libvrtd
+ln -s /etc/runit/sv/qemu-guest-agent /run/runit/service
+sv up qemu-guest-agent
+ln -s /etc/runit/sv/openntpd /run/runit/service
+sv up openntpd
+ln -s /etc/runit/sv/virtlockd /run/runit/service
+sv up virtlockd
+ln -s /etc/runit/virtlogd /run/runit/service
+sv up virtlogd
+
 echo "permit $USER" > /etc/doas.conf
 pacman -Rns sudo
+usermod --append --groups $USER
+
+cd /etc/openvpn
+wget https://raw.githubusercontent.com/m00-git/install-artix/main/update-resolv-conf
+chmod +x update-resolv-conf
 
 ### Rice me out ###
 wget -o /home/$USER/finalconfig.sh https://raw.githubusercontent.com/m00-git/install-artix/main/install-scripts/4finalconfig.sh

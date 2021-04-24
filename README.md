@@ -1,5 +1,4 @@
 # install-artix
-config4sway for easy deployment across new installs
-
-TODO:
-Split necessary files into seperate folders and adjust the links
+This installs artix from a base runit ISO.
+Not completely automated. Manual work needs to be done when jumping from pre-chroot to post-chroot.
+Run the install scripts in their order.

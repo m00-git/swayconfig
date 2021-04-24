@@ -15,15 +15,15 @@ echo "Set your user password"
 passwd me # set user password
 
 rm /etc/mkinitcpio.conf; cd /etc
-wget https://raw.githubusercontent.com/m00-git/swayconfig/main/mkinitcpio.conf
+wget https://raw.githubusercontent.com/m00-git/install-artix/main/sysfiles/mkinitcpio.conf
 cd
 mkinitcpio -p linux
 
 fdisk -l | grep /dev
 echo "Input again the drive you have chosen to install Artix on. Ex: sda"
 read DRIVE
-wget https://raw.githubusercontent.com/m00-git/install-artix/main/grub-top
-wget https://raw.githubusercontent.com/m00-git/install-artix/main/grub-bottom
+wget https://raw.githubusercontent.com/m00-git/install-artix/main/sysfiles/grub-top
+wget https://raw.githubusercontent.com/m00-git/install-artix/main/sysfiles/grub-bottom
 echo GRUB_CMDLINE_LINUX=\"cryptdevice=/dev/$DRIVE\1:artix:allow-discards\" >> grub-top
 cat grub-bottom >> grub-top
 cat grub-top > /etc/default/grub
@@ -33,7 +33,7 @@ rm grub-*
 grub-install --target=i386-pc /dev/$DRIVE
 grub-mkconfig -o /boot/grub/grub.cfg
 
-wget https://raw.githubusercontent.com/m00-git/install-artix/main/config.sh
+wget https://raw.githubusercontent.com/m00-git/install-artix/main/install-scripts/3config.sh
 
 echo "You must now manually enter the following commands: after reboot run bash config.sh"
 echo "exit"

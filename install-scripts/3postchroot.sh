@@ -17,6 +17,6 @@ sv up NetworkManager
 
 ### Rice me out ###
 cd /home/$USER
-wget https://raw.githubusercontent.com/m00-git/install-artix/main/install-scripts/4finalconfig.sh
+wget https://raw.githubusercontent.com/m00-git/install-artix/main/install-scripts/4privconfig.sh
 echo "You will now be entering your user, run doas bash 4privconfig.sh from your home dir"
 su $USER 

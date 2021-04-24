@@ -13,8 +13,8 @@ rm .bashrc
 wget https://raw.githubusercontent.com/m00-git/install-artix/main/configs/.bashrc
 
 mkdir -p ~/.config/termite
-cd sway
-wget https://github.com/m00-git/swayconfig/raw/main/bg.png
+cd ~/.config/sway
+wget https://github.com/m00-git/install-artix/raw/main/bg.png
 
 mkdir -p ~/.config/waybar
 wget https://raw.githubusercontent.com/m00-git/install-artix/main/configs/waybarconfig

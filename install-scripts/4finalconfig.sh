@@ -8,27 +8,26 @@ mv BlockZone.ttf ~/.local/share/fonts
 fc-cache -f -v 
 # Rest of configs
 rm .vimrc
-wget https://raw.githubusercontent.com/m00-git/swayconfig/main/.vimrc
+wget https://raw.githubusercontent.com/m00-git/install-artix/main/configs/.vimrc
 rm .bashrc
-wget https://raw.githubusercontent.com/m00-git/swayconfig/main/.bashrc
+wget https://raw.githubusercontent.com/m00-git/install-artix/main/configs/.bashrc
 
 mkdir -p ~/.config/termite
 cd sway
 wget https://github.com/m00-git/swayconfig/raw/main/bg.png
-wget https://raw.githubusercontent.com/m00-git/swayconfig/main/.bashrc
 
 mkdir -p ~/.config/waybar
-wget https://raw.githubusercontent.com/m00-git/swayconfig/main/waybarconfig
+wget https://raw.githubusercontent.com/m00-git/install-artix/main/configs/waybarconfig
 mv waybarconfig ~/.config/waybar/config
-wget https://raw.githubusercontent.com/m00-git/swayconfig/main/waybarstyle.css
+wget https://raw.githubusercontent.com/m00-git/install-artix/main/configs/waybarstyle.css
 mv waybarstyle.css ~/.config/waybar/style.css
 
 mkdir -p ~/.config/sway
-wget https://raw.githubusercontent.com/m00-git/swayconfig/main/swayconfig
+wget https://raw.githubusercontent.com/m00-git/install-artix/main/configs/swayconfig
 mv swayconfig ~/.config/sway/config
 
 cd ~/termite
-wget https://raw.githubusercontent.com/m00-git/install-artix/main/termite-config
+wget https://raw.githubusercontent.com/m00-git/install-artix/main/configs/termite-config
 mv termite-config config
 cd
 

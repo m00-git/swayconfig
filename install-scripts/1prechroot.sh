@@ -23,7 +23,7 @@ mount -o compress=lzo,subvol=@,$o_btrfs /dev/mapper/artix /mnt
 mount -o compress=lzo,subvol=@home,$o_btrfs /dev/mapper/artix /mnt/home
 mount -o compress=lzo,subvol=@snapshots,$o_btrfs /dev/mapper/artix /mnt/.snapshots
 # Install base system
-basestrap /mnt base base-devel runit elogind-runit linux linux-headers linux-firmware wget vim amd-ucode btrfs-progs grub snapper mlocate networkmanager networkmanager-runit network-manager-applet dosfstools cryptsetup doas
+basestrap /mnt base base-devel runit elogind-runit linux-hardened linux-hardened-headers linux-firmware wget vim amd-ucode btrfs-progs grub snapper mlocate networkmanager networkmanager-runit network-manager-applet dosfstools cryptsetup doas
 # Generate fstab
 fstabgen -U /mnt >> /mnt/etc/fstab
 cd /mnt

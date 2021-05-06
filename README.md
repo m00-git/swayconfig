@@ -1,5 +1,5 @@
 # install-artix
-This installs artix from a base runit ISO.
+This installs artix from a base runit ISO in non-UEFI mode with BTRFS, hardened kernel, and sway.
 Not completely automated. Manual work needs to be done when jumping from pre-chroot to post-chroot.
 Run the install scripts in their order.
 

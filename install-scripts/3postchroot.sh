@@ -6,7 +6,7 @@ read USER
 # Create keyfile so you dont have to enter password twice on boot
 dd bs=512 count=4 if=/dev/urandom of=/crypto_keyfile.bin
 cryptsetup luksAddKey /dev/$DRIVE\1 /crypto_keyfile.bin
-mkinitcpio -p linux
+mkinitcpio -p linux-hardened
 chmod 000 /crypto_keyfile.bin
 chmod -R g-rwx,o-rwx /boot
 # reboot?

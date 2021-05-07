@@ -9,3 +9,6 @@ After booting into the live base artix environment
 3. pacman -S wget
 4. wget https://raw.githubusercontent.com/m00-git/install-artix/main/install-scripts/1prechroot.sh
 5. bash 1prechroot.sh
+
+TODO:
+Update config script to be standalone, merge your configs onto any system. A little interactive "Are you on sway? y/n" if n only bring over .bashrc and .vim config n stuffs.

@@ -26,6 +26,12 @@ mkdir -p ~/.config/sway
 wget https://raw.githubusercontent.com/m00-git/install-artix/main/configs/swayconfig
 mv swayconfig ~/.config/sway/config
 
+mkdir -p ~/.config/rofi
+wget https://raw.githubusercontent.com/m00-git/install-artix/main/configs/rofi-config
+mv rofi-config ~/.config/rofi/config
+wget https://raw.githubusercontent.com/m00-git/install-artix/main/configs/rofi-theme
+mv rofi-theme ~/.config/rofi/orange.rasi
+
 cd ~/termite
 wget https://raw.githubusercontent.com/m00-git/install-artix/main/configs/termite-config
 mv termite-config config

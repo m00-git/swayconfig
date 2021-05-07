@@ -1,6 +1,6 @@
 echo "whos your user"
 read USER
-sudo pacman -S neofetch doas trizen tmux termite wget rofi sway waybar pulseaudio pavucontrol vlc virt-manager libvirt-runit qemu bridge-utils qemu-guest-agent-runit nftables nftables-runit openvpn otf-font-awesome transmission-gtk openntpd openntpd-runit
+sudo pacman -S neofetch doas trizen tmux termite wget rofi sway waybar pulseaudio pavucontrol vlc virt-manager libvirt-runit qemu bridge-utils qemu-guest-agent-runit nftables nftables-runit openvpn otf-font-awesome transmission-gtk openntpd openntpd-runit wl-clipboard
 
 sudo ln -s /etc/runit/sv/libvirtd /run/runit/service
 sudo sv up libvrtd

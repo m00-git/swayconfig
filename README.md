@@ -11,4 +11,5 @@ After booting into the live base artix environment
 5. bash 1prechroot.sh
 
 TODO:
-Update config script to be standalone, merge your configs onto any system. A little interactive "Are you on sway? y/n" if n only bring over .bashrc and .vim config n stuffs.
+* Update config script to be standalone, merge your configs onto any system. A little interactive "Are you on sway? y/n" if n only bring over .bashrc and .vim config n stuffs.
+* Save variables to a file and read from it so doesnt have to ask "what was your drive/user again"

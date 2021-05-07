@@ -1,16 +1,35 @@
+" My vimrc config. I wonder if you can spellcheck in vim. prolly neovim...
+" Enable line numbers
 set number
+" Enable syntax highlighting
 syntax on
+" Make tabs spaces
 set expandtab
+" Make tabs 4 spaces long
 set tabstop=4
 set softtabstop=4
+" On return, keep indent of previous line
 set autoindent
+" Cool vertical line at column 81
 set colorcolumn=81
+" Automatically return a line when text goes past column 80
 set tw=80
+" Themeing for line numbers
 highlight LineNr term=bold cterm=NONE ctermfg=LightBlue ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
+" Enable cursor line
 set cursorline
+" Only highlight the line NUMBER, dont underline the whole line
 set cursorlineopt=number
+" Themeing for current line number
 highlight CursorLineNr cterm=bold term=bold gui=bold ctermfg=1
+" Syntax highlighting for your .notes
+au BufRead,BufNewFile *.notes set filetype=notes
 
+au BufWinLeave * mkview
+au BufWinEnter * silent loadview
+
+" Provides super and subscript functionality in vim, as an example, to
+" superscript 4, one would press ctrl+k -> 4 -> S, or s for subscript
 vnoremap <C-c> "*y
 
 "alphsubs ---------------------- {{{
@@ -109,3 +128,4 @@ vnoremap <C-c> "*y
 "}}}
 
 "   if more special chars are needed, consult https://vimhelp.org/digraph.txt.html
+

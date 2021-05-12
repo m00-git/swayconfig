@@ -9,6 +9,12 @@ echo "DRIVE=$DRIVE" >> /vars
 chmod 666 /vars
 
 parted -s /dev/$DRIVE mklabel msdos
+read userans
+echo "Will this be a SINGLE boot or DUAL boot system?"
+if [ "$userans" == "DUAL" ]
+then
+parted -s /dev/$DRIVE mkpart primary 2048s 50%
+else
 parted -s /dev/$DRIVE mkpart primary 2048s 100%
 cryptsetup --type luks1 --cipher aes-xts-plain64 --hash sha512 --use-random --verify-passphrase luksFormat /dev/$DRIVE\1
 

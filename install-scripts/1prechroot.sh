@@ -45,5 +45,8 @@ fi
 # Generate fstab
 fstabgen -U /mnt >> /mnt/etc/fstab
 cd /mnt
+cp /var tmpvar
 wget https://raw.githubusercontent.com/m00-git/install-artix/main/install-scripts/2chrooted.sh
+cat 2chrooted.sh >> tmpvar
+mv tmpvar 2chrooted.sh
 echo "now run \"artix-chroot /mnt\" then bash 2chrooted.sh"

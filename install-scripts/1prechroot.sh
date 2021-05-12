@@ -5,7 +5,8 @@ fdisk -l | grep /dev
 echo "Input the drive you wish to install Artix to. Ex: sda"
 read DRIVE
 
-echo "DRIVE=$DRIVE" >> vars
+echo "DRIVE=$DRIVE" >> /vars
+chmod 666 /vars
 
 parted -s /dev/$DRIVE mklabel msdos
 parted -s /dev/$DRIVE mkpart primary 2048s 100%

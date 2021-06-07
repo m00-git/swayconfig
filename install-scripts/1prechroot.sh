@@ -42,11 +42,8 @@ if [ "$CPU" == AMD ]
 then
 # Install base system
 basestrap /mnt base base-devel runit elogind-runit linux-hardened linux-hardened-headers usbctl linux-firmware wget vim amd-ucode btrfs-progs grub snapper mlocate networkmanager networkmanager-runit network-manager-applet dosfstools cryptsetup doas
-if [ "$CPU" == INTEL ]
-then
-basestrap /mnt base base-devel runit elogind-runit linux-hardened linux-hardened-headers usbctl linux-firmware wget vim intel-ucode btrfs-progs grub snapper mlocate networkmanager networkmanager-runit network-manager-applet dosfstools cryptsetup doas
 else
-echo "Input either AMD or INTEL, you inputted $CPU"
+basestrap /mnt base base-devel runit elogind-runit linux-hardened linux-hardened-headers usbctl linux-firmware wget vim intel-ucode btrfs-progs grub snapper mlocate networkmanager networkmanager-runit network-manager-applet dosfstools cryptsetup doas
 fi
 
 # Generate fstab

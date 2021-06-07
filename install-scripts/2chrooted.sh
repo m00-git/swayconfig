@@ -1,11 +1,3 @@
-ln -s /usr/share/zoneinfo/America/New_York /etc/localtime
-hwclock --systohc
-echo "pc" > /etc/hostname
-vim /etc/locale.gen # uncomment en_US.UTF-8
-locale-gen
-echo LANG=en_US.utf8 >> /etc/locale.conf
-echo LANGUAGE=en_US >> /etc/locale.conf
-echo LC_ALL=C >> /etc/locale.conf
 echo "Set your root password"
 passwd # set root password
 echo "Name of your user?"
@@ -22,6 +14,15 @@ passwd $USER # set user password
 echo "Was password set successfully? y/n"
 read userans
 done
+
+ln -s /usr/share/zoneinfo/America/New_York /etc/localtime
+hwclock --systohc
+echo "pc" > /etc/hostname
+vim /etc/locale.gen # uncomment en_US.UTF-8
+locale-gen
+echo LANG=en_US.utf8 >> /etc/locale.conf
+echo LANGUAGE=en_US >> /etc/locale.conf
+echo LC_ALL=C >> /etc/locale.conf
 
 rm /etc/mkinitcpio.conf; cd /etc
 wget https://raw.githubusercontent.com/m00-git/install-artix/main/sysfiles/mkinitcpio.conf

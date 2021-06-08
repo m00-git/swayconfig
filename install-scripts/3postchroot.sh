@@ -14,7 +14,7 @@ chmod -R g-rwx,o-rwx /boot
 # reboot?
 
 ### Base System Setup ###
-ln -s /etc/runit/sv/NetworkManager /run/runit/
+ln -s /etc/runit/sv/NetworkManager /run/runit/service
 sv up NetworkManager
 echo "$USER ALL=(ALL) ALL" >> /etc/sudoers
 

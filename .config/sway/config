@@ -47,7 +47,7 @@ bindsym $mod+tab workspace back_and_forth
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-set $menu bemenu-run
+set $menu rofi -show drun
 
 ### Output configuration
 #

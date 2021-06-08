@@ -2,7 +2,10 @@
 # echo "whos your user"
 # read USER
 sudo pacman -S artix-archlinux-support archlinux-mirrorlist
-
+sudo echo "[extra]" >> /etc/pacman.conf
+sudo echo "Include = /etc/pacman.d/mirrorlist-arch" >> /etc/pacman.conf
+sudo echo "[community]" >> /etc/pacman.conf
+sudo echo "Include = /etc/pacman.d/mirrorlist-arch" >> /etc/pacman.conf
 
 sudo pacman -S neofetch doas trizen tmux termite wget rofi sway waybar pulseaudio pavucontrol vlc virt-manager libvirt-runit qemu bridge-utils qemu-guest-agent-runit nftables nftables-runit openvpn otf-font-awesome transmission-gtk chrony chrony-runit wl-clipboard grim slurp swappy xorg-xwayland ttf-nerd-fonts-symbols-mono
 

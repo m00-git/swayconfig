@@ -27,7 +27,7 @@ echo LC_ALL=C >> /etc/locale.conf
 rm /etc/mkinitcpio.conf; cd /etc
 wget https://raw.githubusercontent.com/m00-git/install-artix/main/sysfiles/mkinitcpio.conf
 cd
-mkinitcpio -p linux
+mkinitcpio -p linux-hardened
 
 fdisk -l | grep /dev
 # This part should already be known as we appended this script to /vars

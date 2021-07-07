@@ -7,7 +7,8 @@ sudo echo "Include = /etc/pacman.d/mirrorlist-arch" >> /etc/pacman.conf
 sudo echo "[community]" >> /etc/pacman.conf
 sudo echo "Include = /etc/pacman.d/mirrorlist-arch" >> /etc/pacman.conf
 
-sudo pacman -S neofetch doas trizen tmux termite wget rofi sway waybar pulseaudio pavucontrol vlc virt-manager libvirt-runit qemu bridge-utils qemu-guest-agent-runit nftables nftables-runit openvpn otf-font-awesome transmission-gtk chrony chrony-runit wl-clipboard grim slurp swappy xorg-xwayland ttf-nerd-fonts-symbols-mono
+sudo pacman -S neofetch doas trizen tmux alacritty wget rofi sway waybar pulseaudio pavucontrol vlc nftables nftables-runit openvpn transmission-gtk chrony chrony-runit wl-clipboard grim slurp swappy xorg-xwayland noto-fonts noto-fonts-emoji noto-fonts-extra
+# sudo pacman -S virt-manager libvirt-runit qemu bridge-utils qemu-guest-agent-runit
 
 sudo ln -s /etc/runit/sv/libvirtd /run/runit/service
 sudo sv up libvirtd
